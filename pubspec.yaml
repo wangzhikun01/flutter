@@ -1,0 +1,4 @@
+name: flutter_app_02
+
+dependencies:
+  http: ^0.12.0
