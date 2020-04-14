@@ -1,21 +1,21 @@
-void main(){
-	User u = new User();
-	// print(u.pwd);
-	u.logOut();
+class Father{
+  int age;
+  Father(int age){
+    this.age = age*2;
+  }
 }
 
-class User{
-	static String name = 'root';
-	String	pwd = '123456';
-	static logIn(){
-		print('静态方法');
-		print(name);
-		print(pwd);
-	}
-	logOut(){
-		print('非静态方法');
-		print(name);
-		print(this.pwd);
-		logIn();
-	}
+class Child extends Father{
+  int age;
+  Child(this.age):super(age){
+    this.age = age *3;
+  }
+  sayHi(){
+    print(this.age);
+  }
+}
+
+void main(){
+  Child c = new Child(10);
+  c.sayHi();
 }
